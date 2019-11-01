@@ -1,0 +1,40 @@
+{
+  "author": "Carlos Jeurissen",
+  "homepage_url": "https://apps.jeurissen.co/",
+  "developer": {
+    "name": "Carlos Jeurissen",
+    "url": "https://apps.jeurissen.co/"
+  },
+  "manifest_version": 2,
+  "name": "About:black",
+  "content_security_policy": "default-src 'none'; base-uri 'none'; form-action 'none'; block-all-mixed-content; upgrade-insecure-requests; sandbox; require-sri-for script style",
+  "version": "1.0.0",
+  "applications": {
+    "gecko": {
+      "id": "about-black@apps.jeurissen.co"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "about-black@apps.jeurissen.co"
+    }
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "match_about_blank": true,
+      "matches": ["about:blank"],
+      "css": [
+        "content-script.css"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "96": "icon.svg",
+    "128": "icon.svg",
+    "256": "icon.svg"
+  }
+}

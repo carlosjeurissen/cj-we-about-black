@@ -1,0 +1,131 @@
+{
+  "name": "cj-we-about-black",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": "CarlosJeurissen/cj-we-about-black",
+  "homepage": "https://apps.jeurissen.co/",
+  "author": {
+    "name": "Carlos Jeurissen",
+    "email": "carlos@jeurissen.co"
+  },
+  "bugs": {
+    "email": "support@carlosjeurissen.com"
+  },
+  "devDependencies": {
+    "archiver": "~3.1.1",
+    "autoprefixer": "~9.7.0",
+    "bluebird": "~3.7.1",
+    "chrome-webstore-upload": "^0.2.2",
+    "cssnano": "^4.1.10",
+    "fs-extra": "~8.1.0",
+    "html-minifier": "^4.0.0",
+    "minimatch": "^3.0.4",
+    "minimist": "^1.2.0",
+    "postcss": "~7.0.21",
+    "recursive-readdir": "^2.2.2",
+    "ssri": "~7.1.0",
+    "standard": "~14.3.1",
+    "stylelint": "~11.1.1",
+    "stylelint-config-standard": "~19.0.0",
+    "uglify-js": "~3.6.5",
+    "web-ext": "~3.2.0"
+  },
+  "scripts": {
+    "set-version": "node build/set-version",
+    "build": "node build/build",
+    "build-minify": "node build/build --minify",
+    "predeploy": "yarn run build",
+    "deploy": "node build/deploy",
+    "pack": "yarn run deploy --packonly",
+    "pack-opera": "yarn run pack",
+    "pack-firefox": "yarn run pack",
+    "prelint": "yarn run build",
+    "lint": "web-ext lint --source-dir dist && eslint src/**/*.js",
+    "prerun-firefox": "yarn run build",
+    "run-firefox": "web-ext run --source-dir dist"
+  },
+  "webExt": {
+    "sourceDir": "dist/"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ]
+  },
+  "eslintIgnore": [
+    "dist/*"
+  ],
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "if",
+            "else",
+            "include",
+            "for",
+            "function",
+            "return",
+            "mixin",
+            "each"
+          ]
+        }
+      ],
+      "selector-max-universal": 1,
+      "font-weight-notation": [
+        "numeric",
+        {
+          "ignore": [
+            "relative"
+          ]
+        }
+      ],
+      "function-url-no-scheme-relative": true,
+      "function-url-quotes": [
+        "always",
+        {
+          "except": [
+            "empty"
+          ]
+        }
+      ],
+      "selector-attribute-quotes": "always",
+      "string-quotes": "double",
+      "max-nesting-depth": 2,
+      "color-named": "never",
+      "at-rule-semicolon-space-before": "never",
+      "block-opening-brace-newline-before": "never-single-line",
+      "declaration-block-semicolon-newline-before": "never-multi-line",
+      "function-comma-newline-before": "never-multi-line",
+      "media-query-list-comma-newline-before": "never-multi-line",
+      "selector-list-comma-newline-before": "never-multi-line",
+      "selector-list-comma-space-after": "always-single-line",
+      "value-list-comma-newline-before": "never-multi-line",
+      "value-keyword-case": [
+        "lower",
+        {
+          "ignoreProperties": "unicode-range"
+        }
+      ],
+      "unit-no-unknown": [
+        true,
+        {
+          "ignoreUnits": [
+            "x"
+          ]
+        }
+      ],
+      "shorthand-property-no-redundant-values": true,
+      "no-unknown-animations": true,
+      "at-rule-no-vendor-prefix": true,
+      "media-feature-name-no-vendor-prefix": true,
+      "property-no-vendor-prefix": true,
+      "selector-no-vendor-prefix": true,
+      "value-no-vendor-prefix": true,
+      "font-family-name-quotes": "always-where-recommended"
+    }
+  }
+}
