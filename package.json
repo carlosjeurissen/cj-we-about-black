@@ -1,6 +1,6 @@
 {
   "name": "cj-we-about-black",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "UNLICENSED",
   "private": true,
   "repository": "CarlosJeurissen/cj-we-about-black",
@@ -28,8 +28,8 @@
     "standard": "~14.3.1",
     "stylelint": "~11.1.1",
     "stylelint-config-standard": "~19.0.0",
-    "uglify-js": "~3.6.5",
-    "web-ext": "~3.2.0"
+    "uglify-js": "~3.6.7",
+    "web-ext": "~3.2.1"
   },
   "scripts": {
     "set-version": "node build/set-version",
