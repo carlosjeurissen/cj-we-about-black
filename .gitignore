@@ -12,18 +12,11 @@ node_modules
 
 # Sublime files
 *.sublime-workspace
+*.sublime-project
 
 # Mac and windows files
 .DS_Store
 .tmp
 
-# Grunt files
-.grunt
-.sass-cache
-
-# Distribution directory
-dist
+# Distribution files
 dist_packed
-
-# Credentials
-credentials.json
