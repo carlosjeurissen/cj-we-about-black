@@ -1,6 +1,6 @@
 {
   "name": "cj-we-about-black",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "license": "UNLICENSED",
   "private": true,
   "repository": "CarlosJeurissen/cj-we-about-black",
@@ -13,16 +13,16 @@
     "email": "support@carlosjeurissen.com"
   },
   "devDependencies": {
+    "set-json-version": "^1.0.1",
     "web-ext": "^4.1.0"
   },
   "scripts": {
-    "webext": "web-ext",
     "test": "web-ext run",
     "lint": "web-ext lint",
-    "build": "web-ext build"
+    "build": "web-ext build",
+    "set-version": "set-json-version -f package.json src/manifest.json -v"
   },
   "webExt": {
-    "verbose": true,
     "sourceDir": "src",
     "artifactsDir": "dist_packed",
     "build": {
