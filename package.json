@@ -19,8 +19,15 @@
   "scripts": {
     "build": "web-ext build",
     "lint": "web-ext lint",
-    "run-firefox": "web-ext run --target firefox-desktop",
-    "run-chromium": "web-ext run --target chromium",
+    "run-firefox": "web-ext run --verbose --target firefox-desktop",
+    "run-chromium": "web-ext run --verbose --target chromium",
     "set-version": "set-json-version -f package.json src/manifest.json -v"
+  },
+  "webExt": {
+    "sourceDir": "src",
+    "artifactsDir": "dist_packed",
+    "build": {
+      "overwriteDest": true
+    }
   }
 }
