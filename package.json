@@ -20,6 +20,7 @@
     "build": "web-ext build",
     "lint": "web-ext lint",
     "run-firefox": "web-ext run --verbose --target firefox-desktop",
+    "run-firefox-android": "web-ext run --verbose --target firefox-android",
     "run-chromium": "web-ext run --verbose --target chromium",
     "set-version": "set-json-version -f package.json src/manifest.json -v"
   },
