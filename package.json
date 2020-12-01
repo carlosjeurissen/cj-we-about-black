@@ -13,8 +13,8 @@
     "email": "support@carlosjeurissen.com"
   },
   "devDependencies": {
-    "set-json-version": "^1.0.1",
-    "web-ext": "^4.1.0"
+    "set-json-version": "~1.0.4",
+    "web-ext": "~5.4.0"
   },
   "scripts": {
     "build": "web-ext build",
