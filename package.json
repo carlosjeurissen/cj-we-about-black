@@ -1,6 +1,6 @@
 {
   "name": "cj-we-about-black",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "UNLICENSED",
   "private": true,
   "repository": "CarlosJeurissen/cj-we-about-black",
@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "set-json-version": "~1.0.4",
-    "web-ext": "~5.4.0"
+    "web-ext": "~5.4.1"
   },
   "scripts": {
     "build": "web-ext build",
